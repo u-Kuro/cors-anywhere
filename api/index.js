@@ -30,6 +30,7 @@ export default async (req) => {
         headers.set('Content-Encoding', 'gzip')
         headers.set('Vary', 'Accept-Encoding')
         headers.set('Accept-Ranges', 'bytes')
+        headers.set('Access-Control-Max-Age', '86400')
         let responseBody;
         if (contentType.includes('text')) {
             responseBody = await response.text();
