@@ -1,5 +1,5 @@
 export const config = { runtime: 'edge' };
-const allowedOrigins = ['https://u-kuro.github.io', 'http://localhost:8080', 'http://localhost:3000'];
+const allowedOrigins = ['https://u-kuro.github.io'];
 export default async (req) => {
     try {
         const url = new URL(req.url).searchParams.get('url');
