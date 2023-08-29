@@ -7,7 +7,9 @@ export default async (req) => {
             return new Response("Missing URL parameter", { status: 400 })
         }
         const response = await fetch(url, {
-            'Cache-Control': 'public, max-age=31536000, immutable',
+            headers: {
+                'Cache-Control': 'public, max-age=31536000, immutable',
+            },
             cache: 'force-cache'
         });
         if (!response.ok) {
