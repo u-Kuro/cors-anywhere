@@ -27,7 +27,6 @@ export default async (req) => {
         headers.set('Vercel-CDN-Cache-Control', 'public, max-age=31536000, immutable');
         headers.set('CDN-Cache-Control', 'public, max-age=31536000, immutable');
         headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-        headers.set('cache', 'force-cache');
         headers.set('Access-Control-Allow-Headers', '*')
         headers.set('Content-Encoding', 'gzip')
         headers.set('Vary', 'Accept-Encoding')
